@@ -29,9 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var time_home = UINavigationController(rootViewController: timeViewController)
         time_home.tabBarItem = UITabBarItem(title: "聊天", image: nil, selectedImage: nil)
         
+        
+        //zhihu
+        var zhihu = ZhiHuListViewController()
+        var zhihu_home = UINavigationController(rootViewController: zhihu)
+        zhihu_home.tabBarItem = UITabBarItem(title: "知乎", image: nil, selectedImage: nil)
+        
         //tablebar
         var tabcontroller = UITabBarController()
-        tabcontroller.viewControllers = [time_home,nav_home];
+        tabcontroller.viewControllers = [zhihu_home,time_home,nav_home];
         
         
         self.window?.rootViewController = tabcontroller

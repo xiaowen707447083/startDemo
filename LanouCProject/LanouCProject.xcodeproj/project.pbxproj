@@ -12,6 +12,10 @@
 		3FE17C4C1B8748DC0001FF77 /* LeftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE17C4B1B8748DC0001FF77 /* LeftTableViewCell.swift */; };
 		3FE17C4E1B8748E50001FF77 /* RightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE17C4D1B8748E50001FF77 /* RightTableViewCell.swift */; };
 		3FE17C511B874F940001FF77 /* UILabel+MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE17C501B874F940001FF77 /* UILabel+MyLabel.m */; };
+		3FE17C551B8866110001FF77 /* ZhiHuDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE17C541B8866110001FF77 /* ZhiHuDetailController.swift */; };
+		3FE17C591B886BC00001FF77 /* ZhiHuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE17C581B886BC00001FF77 /* ZhiHuListViewController.swift */; };
+		3FE17C5B1B887C5D0001FF77 /* loading_error.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FE17C5A1B887C5D0001FF77 /* loading_error.jpg */; };
+		3FE17C5D1B8898030001FF77 /* ZhiHuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE17C5C1B8898030001FF77 /* ZhiHuTableViewCell.swift */; };
 		3FE3546F1B85B63A008CED7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3546E1B85B63A008CED7C /* AppDelegate.swift */; };
 		3FE354711B85B63A008CED7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE354701B85B63A008CED7C /* Images.xcassets */; };
 		3FE354741B85B63A008CED7C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE354721B85B63A008CED7C /* LaunchScreen.xib */; };
@@ -104,6 +108,10 @@
 		3FE17C4D1B8748E50001FF77 /* RightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightTableViewCell.swift; sourceTree = "<group>"; };
 		3FE17C4F1B874F940001FF77 /* UILabel+MyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MyLabel.h"; sourceTree = "<group>"; };
 		3FE17C501B874F940001FF77 /* UILabel+MyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MyLabel.m"; sourceTree = "<group>"; };
+		3FE17C541B8866110001FF77 /* ZhiHuDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhiHuDetailController.swift; sourceTree = "<group>"; };
+		3FE17C581B886BC00001FF77 /* ZhiHuListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhiHuListViewController.swift; sourceTree = "<group>"; };
+		3FE17C5A1B887C5D0001FF77 /* loading_error.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loading_error.jpg; sourceTree = "<group>"; };
+		3FE17C5C1B8898030001FF77 /* ZhiHuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhiHuTableViewCell.swift; sourceTree = "<group>"; };
 		3FE354691B85B63A008CED7C /* LanouCProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanouCProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE3546D1B85B63A008CED7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FE3546E1B85B63A008CED7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -266,6 +274,24 @@
 			path = time;
 			sourceTree = "<group>";
 		};
+		3FE17C521B8865BB0001FF77 /* 36ke */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 36ke;
+			sourceTree = "<group>";
+		};
+		3FE17C531B8865BB0001FF77 /* zhihu */ = {
+			isa = PBXGroup;
+			children = (
+				3FE17C5A1B887C5D0001FF77 /* loading_error.jpg */,
+				3FE17C541B8866110001FF77 /* ZhiHuDetailController.swift */,
+				3FE17C581B886BC00001FF77 /* ZhiHuListViewController.swift */,
+				3FE17C5C1B8898030001FF77 /* ZhiHuTableViewCell.swift */,
+			);
+			path = zhihu;
+			sourceTree = "<group>";
+		};
 		3FE354601B85B63A008CED7C = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +370,8 @@
 		3FE3548B1B85B6B8008CED7C /* src */ = {
 			isa = PBXGroup;
 			children = (
+				3FE17C521B8865BB0001FF77 /* 36ke */,
+				3FE17C531B8865BB0001FF77 /* zhihu */,
 				3FE17C481B87269C0001FF77 /* time */,
 				3FE355771B85C060008CED7C /* home */,
 			);
@@ -652,6 +680,7 @@
 				3FE354F61B85B7D4008CED7C /* loading__8.png in Resources */,
 				3FE354741B85B63A008CED7C /* LaunchScreen.xib in Resources */,
 				3FE354EE1B85B7D4008CED7C /* loading__11.png in Resources */,
+				3FE17C5B1B887C5D0001FF77 /* loading_error.jpg in Resources */,
 				3FE354711B85B63A008CED7C /* Images.xcassets in Resources */,
 				3FE354EF1B85B7D4008CED7C /* loading__12.png in Resources */,
 				3FE354F81B85B7D4008CED7C /* MyConfig.plist in Resources */,
@@ -679,6 +708,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE17C5D1B8898030001FF77 /* ZhiHuTableViewCell.swift in Sources */,
 				3FE355541B85B84D008CED7C /* MJRefreshFooterView.m in Sources */,
 				3FE354E61B85B7D4008CED7C /* OnboardingViewController.m in Sources */,
 				3FE3546F1B85B63A008CED7C /* AppDelegate.swift in Sources */,
@@ -689,6 +719,7 @@
 				3FE355621B85B84D008CED7C /* UIButton+WebCache.m in Sources */,
 				3FE354E21B85B7D4008CED7C /* MyBaseViewController.swift in Sources */,
 				3FE355601B85B84D008CED7C /* SDWebImageManager.m in Sources */,
+				3FE17C591B886BC00001FF77 /* ZhiHuListViewController.swift in Sources */,
 				3FE354E51B85B7D4008CED7C /* OnboardingContentViewController.m in Sources */,
 				3FE3554A1B85B84D008CED7C /* FMDatabaseAdditions.m in Sources */,
 				3FE355571B85B84D008CED7C /* UIScrollView+MJRefresh.m in Sources */,
@@ -736,6 +767,7 @@
 				3FE355611B85B84D008CED7C /* SDWebImagePrefetcher.m in Sources */,
 				3FE355641B85B84D008CED7C /* UIImage+MultiFormat.m in Sources */,
 				3FE354FB1B85B7D4008CED7C /* NSURLConnectionUtil.m in Sources */,
+				3FE17C551B8866110001FF77 /* ZhiHuDetailController.swift in Sources */,
 				3FE355501B85B84D008CED7C /* MBProgressHUD.m in Sources */,
 				3FE355701B85B8EA008CED7C /* TFHpple.m in Sources */,
 			);
@@ -865,6 +897,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LanouCProject/commond/LanouCProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -882,6 +915,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LanouCProject/commond/LanouCProject-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

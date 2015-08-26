@@ -30,7 +30,7 @@ class TimeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         var time1 = TimeModel()
         time1.name = "小明"
         time1.messageType = 1
-        time1.message = "我真是日了狗了,我真是日了狗了,我真是日了狗了,我真是日了狗了,我真是日了狗了,我真是日了狗了,我真是日了狗了,我真是日了狗了,😊🐶"
+        time1.message = "这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶这只是一个测试数据,😊🐶"
         
         
         dataArr.append(time1)
@@ -84,10 +84,10 @@ class TimeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        //
-        
-    }
+//    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+//        //
+//        
+//    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //
