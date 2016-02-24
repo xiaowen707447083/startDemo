@@ -88,6 +88,7 @@
 		3F44E7741B85757D00928E80 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = lanou3g;
 				TargetAttributes = {
@@ -233,6 +234,7 @@
 				3F44E7851B85757D00928E80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

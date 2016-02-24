@@ -8,15 +8,16 @@
 
 import Foundation
 
-println("Hello, World!")
+print("Hello, World!")
 
 //打印根目录/在ios中是沙盒目录
 var nshome = NSHomeDirectory()
-println(nshome)
+print(nshome)
+
 
 //文档所在目录
 var documentDirectory = nshome.stringByAppendingPathComponent("Documents")
-println(documentDirectory)
+print(documentDirectory)
 
 var fileManager:NSFileManager = NSFileManager()
 //创建一个目录 withIntermediateDirectories:是否覆盖
