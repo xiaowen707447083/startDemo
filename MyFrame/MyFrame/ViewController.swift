@@ -13,6 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        let req = ModelRequest(requestBody: "请求体", userApi: "api110")
+        req.describe()
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

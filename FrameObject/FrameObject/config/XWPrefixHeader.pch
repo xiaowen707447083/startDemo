@@ -1,0 +1,17 @@
+//
+//  XWPrefixHeader.pch
+//  FrameObject
+//
+//  Created by shenba on 16/4/8.
+//  Copyright © 2016年 xiaowen. All rights reserved.
+//
+
+#ifndef XWPrefixHeader_pch
+#define XWPrefixHeader_pch
+
+#import "XWSourceFrame.h"
+
+
+
+
+#endif /* XWPrefixHeader_pch */
