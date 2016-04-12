@@ -7,6 +7,7 @@
 //
 
 #import "XWModelRequest.h"
+#import "XWDateUtil.h"
 
 @implementation XWModelRequest
 
@@ -68,7 +69,7 @@
     NSDate *date = [self dateWithTimestempStr:_systemUUID];
     
     
-    NSString *dataStr = [self strWithDate:date withForMet:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *dataStr = [XWDateUtil strWithDate:date withForMet:@"yyyy-MM-dd HH:mm:ss"];
     NSLog(@"请求时间:%@",dataStr);
     
     
@@ -121,14 +122,7 @@
     return nil;
 }
 
-//时间转字符串
--(NSString *)strWithDate:(NSDate *)date withForMet:(NSString *)forMet{
-    NSDateFormatter*df = [[NSDateFormatter alloc]init];//格式化
-    
-    [df setDateFormat:forMet];
-    
-    return  [df stringFromDate:date];
-}
+
 
 //字符串转时间
 -(NSDate *)dateWithStr:(NSString *)dateStr withForMet:(NSString *)forMet{

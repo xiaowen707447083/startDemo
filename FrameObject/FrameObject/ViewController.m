@@ -35,6 +35,9 @@
     describe(xw)
     
     
+    XWLocationUtil *locationUtil = [[XWLocationUtil alloc] init];
+    [locationUtil startUpdateAccelerometer];
+    
 }
 
 - (void)didReceiveMemoryWarning {

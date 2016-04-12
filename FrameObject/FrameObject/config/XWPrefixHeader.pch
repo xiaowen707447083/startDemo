@@ -12,6 +12,8 @@
 #import "XWSourceFrame.h"
 
 
-
+//自动布局3方
+#import "UITableView+SDAutoTableViewCellHeight.h"
+#import "UIView+SDAutoLayout.h"
 
 #endif /* XWPrefixHeader_pch */

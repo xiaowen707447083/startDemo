@@ -11,7 +11,7 @@
 @implementation XWModelRequestNotification
 
 -(void)describe{
-    NSLog(@"通知名:%@",_notificationName);
+    NSLog(@"    通知名:%@",_notificationName);
 }
 
 

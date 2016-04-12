@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Con_LiftSkills.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,39 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //给homeNav添加文字和图片
+    Con_LiftSkills *homePage = [[Con_LiftSkills alloc] init];
+    homePage.title = @"原料";
+    UINavigationController *homeNav = [[UINavigationController alloc]initWithRootViewController:homePage];
+    UITabBarItem *homeItem=[[UITabBarItem alloc]initWithTitle:@"原料" image:nil selectedImage:nil];
+    homePage.tabBarItem=homeItem;
+    
+    
+    
+    //给libraryNav添加文字和图片
+    Con_LiftSkills *library = [[Con_LiftSkills alloc] init];
+    library.title = @"配方";
+    UITabBarItem *libraryItem=[[UITabBarItem alloc]initWithTitle:@"配方" image:nil selectedImage:nil];
+    library.tabBarItem=libraryItem;
+    UINavigationController *libraryNav = [[UINavigationController alloc]initWithRootViewController:library];
+    
+    
+//    DownLoadViewController *downLoadVC = [DownLoadViewController new];
+//    UITabBarItem *downLoadItem=[[UITabBarItem alloc]initWithTitle:@"下载" image:[UIImage imageNamed:@"3.png"] tag:1];
+//    downLoadVC.tabBarItem=downLoadItem;
+//    
+//    UINavigationController *downloadNav = [[UINavigationController alloc]initWithRootViewController:downLoadVC];
+    
+    
+    
+    UITabBarController *tabBar = [[UITabBarController alloc]init];
+    tabBar.viewControllers = @[homeNav,libraryNav];
+    
+    
+    self.window.rootViewController = tabBar;
     return YES;
 }
 
