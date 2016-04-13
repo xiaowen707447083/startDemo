@@ -10,4 +10,7 @@
 //原料页面
 @interface Con_Planting : XWBaseViewController
 
+@property(strong,nonatomic)NSString *type1;
+@property(strong,nonatomic)NSString *type2;
+
 @end

@@ -27,8 +27,17 @@
 
 -(void)createMyViewController{
     _mv = [[ModelAttribute_LiftSkills alloc] init];
+    
+    if ([self.title isEqualToString:@"原料"]) {
+        _mv.type1 = @"1";
+        
+    }else{
+        _mv.type1 = @"2";
+       
+    }
     _dataArr = _mv.dataList;
-    _tb = [[UITableView alloc] initWithFrame:self.view.frame];
+    
+    _tb = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, MainWindowwidth, MainWindowHeight)];
     _tb.delegate = self;
     _tb.dataSource = self;
     [self.view addSubview:_tb];
@@ -60,7 +69,7 @@
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    ModelAttribute *model = [_dataArr objectAtIndex:indexPath.row];
+    NSObject *model = [_dataArr objectAtIndex:indexPath.row];
     [_mv turnToDetailWithModel:model viewController:self];
 }
 

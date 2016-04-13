@@ -13,6 +13,8 @@
 
 @interface ModelPlanting_PlantingDetail : NSObject
 
+
+
 @property(strong,nonatomic)ModelPlanting *model;
 
 @property(strong,nonatomic)NSString *tf_time_text;//显示的时间

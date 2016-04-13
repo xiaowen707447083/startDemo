@@ -9,6 +9,11 @@
 #import "AppDelegate.h"
 #import "Con_LiftSkills.h"
 
+#import "Util_table_type.h"
+#import "Util_table_type2.h"
+#import "Util_table_formula.h"
+#import "Util_table_planting.h"
+
 @interface AppDelegate ()
 
 @end
@@ -18,6 +23,79 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //数据库部分
+    Boolean isFirstRunApp = [[MyFMDataManager sharedManager] isFirstRunDataBase];
+    
+    if (isFirstRunApp) {
+        //类型1表
+        [[[Util_table_type alloc] init] createDataBaseTable];
+        //类型2表
+        [[[Util_table_type2 alloc] init] createDataBaseTable];
+        //材料表
+        [[[Util_table_formula alloc] init] createDataBaseTable];
+        //配方表
+        [[[Util_table_planting alloc] init] createDataBaseTable];
+    }
+    
+    //模拟数据测试
+    for (int i=0; i<5; i++) {
+        
+        //原料
+        NSDictionary *dic = @{ @"name":[NSString stringWithFormat:@"种植%d",i],
+                                        @"mid":[NSString stringWithFormat:@"%d",i],
+                                        @"type1_id":@"1"
+                                        };
+        
+        [[[Util_table_type2 alloc] init] adddataBaseWithConditions:dic];
+        
+        //配方
+        NSDictionary *dic2 = @{ @"name":[NSString stringWithFormat:@"烹饪%d",i],
+                               @"mid":[NSString stringWithFormat:@"%d",i],
+                               @"type1_id":@"2"
+                               };
+        
+        [[[Util_table_type2 alloc] init] adddataBaseWithConditions:dic2];
+    }
+    
+    for(int i=0;i<5;i++){
+        
+        NSDictionary *dic = @{
+                              @"name":[NSString stringWithFormat:@"小麦%d",i],
+                              @"mId":[NSString stringWithFormat:@"%d",i],
+                              @"type1_id":@"1",
+                              @"type2_id":[NSString stringWithFormat:@"%d",i],
+                              @"times_hour":@"12",
+                              @"times_min":@"0",
+                              @"tili":@"555",
+                              @"huoli":@"666",
+                              @"number":@"2",
+                              @"danwei":@"薇草",
+                              };
+        
+        
+        
+        NSDictionary *dic2 = @{
+                               @"name":[NSString stringWithFormat:@"金矿%d",i],
+                               @"mid":[NSString stringWithFormat:@"%d",i],
+                               @"type1_id":@"2",
+                               @"type2_id":[NSString stringWithFormat:@"%d",i],
+                               @"dynamic":@"555",
+                               @"PhysicalStrength":@"555"
+                               };
+        
+        [[[Util_table_planting alloc] init] adddataBaseWithConditions:dic];
+        [[[Util_table_formula alloc] init] adddataBaseWithConditions:dic2];
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

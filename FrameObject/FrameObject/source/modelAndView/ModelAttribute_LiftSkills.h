@@ -6,7 +6,6 @@
 //  Copyright © 2016年 xiaowen. All rights reserved.
 //
 
-#import "ModelAttribute.h"
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
@@ -14,13 +13,15 @@
 
 //列表
 @property(strong,nonatomic)NSMutableArray *dataList;
+@property(strong,nonatomic)NSMutableArray *dataList1;
+@property(strong,nonatomic)NSString *type1;
 
 //获取cell;
--(void)updateCell:(ModelAttribute *)model cell:(UITableViewCell *)cell;
+-(void)updateCell:(NSObject *)model cell:(UITableViewCell *)cell;
 //获取高度
 -(CGFloat)getCellHeight;
 
 //调转到详情页面
--(void)turnToDetailWithModel:(ModelAttribute *)model viewController:(UIViewController *)viewController;
+-(void)turnToDetailWithModel:(NSObject *)model viewController:(UIViewController *)viewController;
 
 @end

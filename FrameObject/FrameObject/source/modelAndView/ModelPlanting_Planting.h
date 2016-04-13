@@ -12,6 +12,10 @@
 
 @interface ModelPlanting_Planting : NSObject
 
+//类型1
+@property(strong,nonatomic)NSString *type1;
+//类型2
+@property(strong,nonatomic)NSString *type2;
 //列表
 @property(strong,nonatomic)NSMutableArray *dataList;
 

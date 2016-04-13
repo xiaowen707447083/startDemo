@@ -26,6 +26,8 @@
 
 -(void)createMyViewController{
     _mv = [[ModelPlanting_Planting alloc] init];
+    _mv.type1 = _type1;
+    _mv.type2 = _type2;
     _dataArr = _mv.dataList;
     _tb = [[UITableView alloc] initWithFrame:self.view.frame];
     _tb.delegate = self;

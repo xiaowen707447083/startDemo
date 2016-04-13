@@ -12,6 +12,8 @@
 
 @property(strong,nonatomic)NSString *name;//名称
 @property(assign,nonatomic)int mId;//id
+@property(assign,nonatomic)int type1_id;//所属分类1
+@property(assign,nonatomic)int type2_id;//所属分类2
 @property(assign,nonatomic)int times_hour;//时间1
 @property(assign,nonatomic)int times_min;//时间2
 

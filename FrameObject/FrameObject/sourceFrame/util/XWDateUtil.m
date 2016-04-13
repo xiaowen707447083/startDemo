@@ -26,6 +26,14 @@
 
 //时间转字符串
 +(NSString *)strWithDate:(NSDate *)date withForMet:(NSString *)forMet{
+    
+    if (date == nil) {
+        date = [NSDate date];
+    }
+    if (forMet==nil) {
+        forMet = @"yyyy-MM-dd HH:mm:ss";
+    }
+    
     NSDateFormatter*df = [[NSDateFormatter alloc]init];//格式化
     
     [df setDateFormat:forMet];

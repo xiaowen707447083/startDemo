@@ -6,9 +6,9 @@
 //  Copyright © 2016年 xiaowen. All rights reserved.
 //
 
-#import "ModelAttribute.h"
+#import "ModelType1.h"
 
-@implementation ModelAttribute
+@implementation ModelType1
 
 
 

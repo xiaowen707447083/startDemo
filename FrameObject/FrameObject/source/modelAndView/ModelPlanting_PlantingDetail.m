@@ -78,35 +78,40 @@
     }
     
     CGFloat width = scrollerView.frame.size.width;
-    
     //名字
     UILabel *lable1 = [[UILabel alloc] init];
+    lable1.font = [UIFont systemFontOfSize:18];
+    lable1.text = [NSString stringWithFormat:@"[%@]",fo.name];
     [scrollerView addSubview:lable1];
     lable1.sd_layout
     .leftSpaceToView(scrollerView, 10)
-    .heightIs(20)
-    .topSpaceToView(scrollerView, 10);
+    .topSpaceToView(scrollerView, 10)
+    .heightIs(25);
     [lable1 setSingleLineAutoResizeWithMaxWidth:width-20];
-    lable1.text = [NSString stringWithFormat:@"%@",fo.name];
+    
     //体力
     UILabel *lable2 = [[UILabel alloc] init];
+    lable2.font = [UIFont systemFontOfSize:15];
+    lable2.text = [NSString stringWithFormat:@"体力消耗:%d",fo.PhysicalStrength];
     [scrollerView addSubview:lable2];
     lable2.sd_layout
     .leftSpaceToView(scrollerView, 10)
     .heightIs(20)
     .topSpaceToView(lable1, 10);
     [lable2 setSingleLineAutoResizeWithMaxWidth:width-20];
-    lable2.text = [NSString stringWithFormat:@"体力消耗:%d",fo.PhysicalStrength];
+    
     
     //活力
     UILabel *lable3 = [[UILabel alloc] init];
+    lable3.font = [UIFont systemFontOfSize:15];
+    lable3.text = [NSString stringWithFormat:@"活力消耗:%d",fo.dynamic];
     [scrollerView addSubview:lable3];
     lable3.sd_layout
     .leftSpaceToView(scrollerView, 10)
     .heightIs(20)
     .topSpaceToView(lable2, 10);
     [lable3 setSingleLineAutoResizeWithMaxWidth:width-20];
-    lable3.text = [NSString stringWithFormat:@"活力消耗:%d",fo.dynamic];
+    
     
     //材料
     NSString *cailiaoStr = @"";
@@ -114,9 +119,9 @@
     for (int i=0; i<Arr.count; i++) {
         NSString *temst = Arr[i];
         if (i==0) {
-            cailiaoStr = [NSString stringWithFormat:@"%@%@*%@",cailiaoStr,temst,[fo.materials valueForKey:temst]];
+            cailiaoStr = [NSString stringWithFormat:@"%@  %@*%@",cailiaoStr,temst,[fo.materials valueForKey:temst]];
         }else{
-            cailiaoStr = [NSString stringWithFormat:@"%@,%@*%@",cailiaoStr,temst,[fo.materials valueForKey:temst]];
+            cailiaoStr = [NSString stringWithFormat:@"%@,  %@*%@",cailiaoStr,temst,[fo.materials valueForKey:temst]];
         }
     }
     UILabel *lable4 = [[UILabel alloc] init];
@@ -127,9 +132,9 @@
     .topSpaceToView(lable3, 10)
     .autoHeightRatio(0);
     
-    lable4.text = [NSString stringWithFormat:@"材料:%@",cailiaoStr];
+    lable4.text = [NSString stringWithFormat:@"材料:  %@",cailiaoStr];
     
-    
+    scrollerView.contentSize = CGSizeMake(scrollerView.frame.size.width, lable4.frame.size.height+lable4.frame.origin.y);
     
 }
 

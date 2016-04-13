@@ -8,30 +8,29 @@
 
 #import "ModelAttribute_LiftSkills.h"
 #import "Con_Planting.h"
+#import "Util_table_type2.h"
 
 @implementation ModelAttribute_LiftSkills
 
 
 -(NSMutableArray *)dataList{
-    
+    //原料
     if (_dataList == nil) {
-        _dataList = [NSMutableArray array];
-        
-        ModelAttribute *attri = [[ModelAttribute alloc] init];
-        attri.name = @"种植";
-        [_dataList addObject:attri];
-        
-        
+        _dataList = [[[Util_table_type2 alloc] init] getResultsWithDictionary:@{@"type1_id":_type1}];
+
         
     }
     
     return _dataList;
 }
 
+
+
+
 //获取cell;
--(void)updateCell:(ModelAttribute *)model cell:(UITableViewCell *)cell{
+-(void)updateCell:(NSObject *)model cell:(UITableViewCell *)cell{
     
-    cell.detailTextLabel.text = model.name;
+    cell.detailTextLabel.text = [model valueForKey:@"name"];
     
 }
 //获取高度
@@ -42,12 +41,15 @@
 }
 
 //调转到详情页面
--(void)turnToDetailWithModel:(ModelAttribute *)model viewController:(UIViewController *)viewController{
+-(void)turnToDetailWithModel:(NSObject *)model viewController:(UIViewController *)viewController{
     
     Con_Planting *con = [[Con_Planting alloc] init];
-    con.title = [NSString stringWithFormat:@"[%@]详细",model.name];
+    con.type1 = _type1;
+    con.type2 = [model valueForKey:@"mid"];
+    con.title = [NSString stringWithFormat:@"[%@]详细",[model valueForKey:@"name"]];
+    viewController.hidesBottomBarWhenPushed = YES;
     [viewController.navigationController pushViewController:con animated:YES];
-    
+    viewController.hidesBottomBarWhenPushed = NO;
 }
 
 @end

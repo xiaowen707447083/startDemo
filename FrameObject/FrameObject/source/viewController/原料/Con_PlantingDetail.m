@@ -137,15 +137,21 @@
     .topSpaceToView(_tf_shijian2, 30);
     [tempLable setSingleLineAutoResizeWithMaxWidth:MainWindowwidth-20];
     
+    
+    UIView *tempView = [[UIView alloc] init];
+    [scrollView addSubview:tempView];
+    tempView.sd_layout
+    .widthIs(MainWindowwidth-50)
+    .leftSpaceToView(scrollView,25)
+    .topSpaceToView(tempLable,20)
+    .bottomSpaceToView(scrollView,200);
+    
+    
     //根据配方进行分类
     _peiFangScrollView = [[UIScrollView alloc] init];
-    [scrollView addSubview:_peiFangScrollView];
+    [tempView addSubview:_peiFangScrollView];
     _peiFangScrollView.backgroundColor = [UIColor grayColor];
-    _peiFangScrollView.sd_layout
-    .widthIs(scrollView.frame.size.width-50)
-    .leftSpaceToView(scrollView,25)
-    .topSpaceToView(_tf_shijian2,50)
-    .bottomSpaceToView(scrollView,20);
+    _peiFangScrollView.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
     
     
     NSMutableArray *arr = [_mv getPeifangAll];

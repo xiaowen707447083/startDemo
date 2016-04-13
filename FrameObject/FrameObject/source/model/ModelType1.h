@@ -7,8 +7,8 @@
 //
 
 #import "XWBaseModel.h"
-//分类列表
-@interface ModelAttribute : XWBaseModel
+//材料/配方
+@interface ModelType1 : XWBaseModel
 
 @property(strong,nonatomic)NSString *name;//属性名
 @property(assign,nonatomic)int mid;//属性id

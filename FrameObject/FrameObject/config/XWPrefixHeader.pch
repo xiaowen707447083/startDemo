@@ -9,11 +9,19 @@
 #ifndef XWPrefixHeader_pch
 #define XWPrefixHeader_pch
 
+//框架代码
 #import "XWSourceFrame.h"
 
+
+//数据库部分所需
+#import "MyFMDataManager.h"
 
 //自动布局3方
 #import "UITableView+SDAutoTableViewCellHeight.h"
 #import "UIView+SDAutoLayout.h"
+
+
+
+
 
 #endif /* XWPrefixHeader_pch */
