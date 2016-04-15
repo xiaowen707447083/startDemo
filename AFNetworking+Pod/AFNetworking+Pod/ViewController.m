@@ -52,17 +52,17 @@
 
 
 #pragma -mark ---------------mysearchbar delegate-----------------
--(void)onclickImageLeft{
-    NSLog(@"你点击了左边的图标");
-}
--(void)onclickTextFile{
-    NSLog(@"你点击了右侧的输入框");
-    HomeSearchViewController *home = [[HomeSearchViewController alloc] init];
-    home.placeholder = _mySearchBar.searchTextField.placeholder;
-    [self.navigationController pushViewController:home animated:YES];
-    
-    
-}
+//-(void)onclickImageLeft{
+//    NSLog(@"你点击了左边的图标");
+//}
+//-(void)onclickTextFile{
+//    NSLog(@"你点击了右侧的输入框");
+//    HomeSearchViewController *home = [[HomeSearchViewController alloc] init];
+//    home.placeholder = _mySearchBar.searchTextField.placeholder;
+//    [self.navigationController pushViewController:home animated:YES];
+//    
+//    
+//}
 
 
 
