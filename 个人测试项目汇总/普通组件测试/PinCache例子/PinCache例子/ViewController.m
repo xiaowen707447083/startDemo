@@ -6,12 +6,19 @@
 //  Copyright © 2016年 xw.com. All rights reserved.
 //
 
+#include <objc/runtime.h>
+
+
+
+
 #import "ViewController.h"
 #import "PINCache.h"
 
 //
 #import "statisticalManager.h"
 #import "impl1.h"
+
+
 
 @interface ViewController ()
 
@@ -23,6 +30,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    Class LSApplicationWorkspace_class = objc_getClass("LSApplicationWorkspace");
+    NSObject* workspace = [LSApplicationWorkspace_class performSelector:@selector(defaultWorkspace)];
+    NSLog(@"apps: %@", [workspace performSelector:@selector(allApplications)]);
+    id result = [workspace performSelector:@selector(allApplications)];
+    if ([result isKindOfClass:[NSArray class]]) {
+        NSLog(@"是一个数组%@",result[0]);
+       
+        
+    }
+    
     
     NSLog(@"name：%@",[PINCache sharedCache].name);
     
@@ -31,6 +48,7 @@
     NSLog(@"name：%@",[PINCache sharedCache].diskCache);
     
     NSLog(@"name：%@",[PINCache sharedCache].memoryCache);
+    
     
     
     
@@ -63,6 +81,27 @@
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"value1",@"key1",@"value2",@"key2", nil];
     [[statisticalManager sharedManager] clickBtn:@"heh" params:dic];
     
+    
+    UIButton *buttn = [UIButton buttonWithType:UIButtonTypeCustom];
+    buttn.frame = CGRectMake(50, 100, 100, 30);
+    buttn.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:buttn];
+    [buttn addTarget:self action:@selector(openAppShenBa) forControlEvents:UIControlEventTouchUpInside];
+    
+//    [self openAppShenBa];
+    self.view.backgroundColor = [UIColor yellowColor];
+    
+}
+
+
+
+//启动另外一样应用
+-(void)openAppShenBa{
+    NSURL * myURL_APP_A = [NSURL URLWithString:@"myTestOpen://"];
+    if ([[UIApplication sharedApplication] canOpenURL:myURL_APP_A]) {
+        NSLog(@"canOpenURL");
+       [[UIApplication sharedApplication] openURL:myURL_APP_A];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

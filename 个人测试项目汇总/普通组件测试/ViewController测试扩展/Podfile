@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target ‘ViewController测试扩展’ do
+
+platform :ios, ‘7.0’
+inhibit_all_warnings!
+
+pod 'JPush', '~> 2.1.6'
+
+
+end

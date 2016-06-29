@@ -18,6 +18,7 @@
 		275738871CED5F4900D60E38 /* PinCache__UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 275738861CED5F4900D60E38 /* PinCache__UITests.m */; };
 		27F6450A1CF2EDB100C88987 /* statisticalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F645091CF2EDB100C88987 /* statisticalManager.m */; };
 		27F6450D1CF2F0F800C88987 /* impl1.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6450C1CF2F0F700C88987 /* impl1.m */; };
+		B74A79DE1CFD25D70095B85D /* PrameMarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B74A79DD1CFD25D70095B85D /* PrameMarkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		27F6450C1CF2F0F700C88987 /* impl1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = impl1.m; sourceTree = "<group>"; };
 		5D751DACBF83E597E1CD08CF /* Pods-PinCache例子.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinCache例子.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinCache例子/Pods-PinCache例子.debug.xcconfig"; sourceTree = "<group>"; };
 		A19EFDFA679DF3EC62D980A2 /* libPods-PinCache例子.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PinCache例子.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B74A79DC1CFD25D70095B85D /* PrameMarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrameMarkViewController.h; sourceTree = "<group>"; };
+		B74A79DD1CFD25D70095B85D /* PrameMarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrameMarkViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				275738651CED5F4900D60E38 /* AppDelegate.m */,
 				275738671CED5F4900D60E38 /* ViewController.h */,
 				275738681CED5F4900D60E38 /* ViewController.m */,
+				B74A79DC1CFD25D70095B85D /* PrameMarkViewController.h */,
+				B74A79DD1CFD25D70095B85D /* PrameMarkViewController.m */,
 				2757386A1CED5F4900D60E38 /* Main.storyboard */,
 				2757386D1CED5F4900D60E38 /* Assets.xcassets */,
 				2757386F1CED5F4900D60E38 /* LaunchScreen.storyboard */,
@@ -252,6 +257,7 @@
 				TargetAttributes = {
 					2757385D1CED5F4900D60E38 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3AN9XDZURK;
 					};
 					275738761CED5F4900D60E38 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -368,6 +374,7 @@
 				275738631CED5F4900D60E38 /* main.m in Sources */,
 				27F6450A1CF2EDB100C88987 /* statisticalManager.m in Sources */,
 				27F6450D1CF2F0F800C88987 /* impl1.m in Sources */,
+				B74A79DE1CFD25D70095B85D /* PrameMarkViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +447,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiaowen chen (33P7VTXPLU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xiaowen chen (33P7VTXPLU)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -462,6 +470,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "5952aad3-c24f-46a3-b71d-cc36a49284d3";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -484,7 +493,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiaowen chen (33P7VTXPLU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xiaowen chen (33P7VTXPLU)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -499,6 +509,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "5952aad3-c24f-46a3-b71d-cc36a49284d3";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -509,10 +520,14 @@
 			baseConfigurationReference = 5D751DACBF83E597E1CD08CF /* Pods-PinCache例子.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiaowen chen (33P7VTXPLU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xiaowen chen (33P7VTXPLU)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "PinCache例子/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xw.pincacheText.PinCache--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou.pinchcheText1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5952aad3-c24f-46a3-b71d-cc36a49284d3";
 			};
 			name = Debug;
 		};
@@ -521,10 +536,14 @@
 			baseConfigurationReference = 1BEB44AC03F9304B6D60A6EE /* Pods-PinCache例子.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiaowen chen (33P7VTXPLU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xiaowen chen (33P7VTXPLU)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "PinCache例子/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xw.pincacheText.PinCache--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou.pinchcheText1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5952aad3-c24f-46a3-b71d-cc36a49284d3";
 			};
 			name = Release;
 		};

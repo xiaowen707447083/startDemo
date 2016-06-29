@@ -1,0 +1,6 @@
+framework module Pods_ReactiveCocoaTextSwift {
+  umbrella header "Pods-ReactiveCocoaTextSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

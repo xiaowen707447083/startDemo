@@ -1,0 +1,25 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target ‘BaseProject’ do
+
+platform :ios, ‘7.0’
+inhibit_all_warnings!
+
+pod 'PINCache', '~> 2.2.2'
+pod 'AFNetworking', '~> 3.1.0'
+pod 'SDWebImage', '~> 3.8.1'
+pod 'JPush', '~> 2.1.7'
+pod 'UMengAnalytics', '~> 4.0.4'
+pod 'UMengSocialCOM', '~> 5.2.1'
+pod 'SDAutoLayout', '~> 2.1.1'
+pod 'FMDB', '~> 2.6.2'
+pod 'IQKeyboardManager'
+pod 'MJRefresh'
+pod 'MBProgressHUD'
+pod 'GVUserDefaults', '~> 1.0.2'
+pod 'RegexKitLite', '~> 4.0'
+
+
+
+
+end

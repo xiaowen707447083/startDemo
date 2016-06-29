@@ -12,4 +12,8 @@
 
 - (NSArray <NSTextCheckingResult *> *)machesWithPattern:(NSString *)pattern;
 
++(NSString *)getIPAddressIpv4;
+
++(NSString *)getIPAddressIpv6;
+
 @end

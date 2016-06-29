@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target ‘ReactiveCocoaText’ do
+
+platform :ios, ‘8.0’
+inhibit_all_warnings!
+use_frameworks!
+
+pod 'ReactiveCocoa', '~> 4.1.0'
+
+end 
+
+

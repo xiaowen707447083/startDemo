@@ -1,0 +1,41 @@
+//
+//  PrefixHeader.pch
+//  BaseProject
+//
+//  Created by xiaowen.chen on 16/6/21.
+//  Copyright © 2016年 xw.com. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+//宏定义
+#import "UserMacros.h"
+#import "UserMacrosValidation.h"
+//语言
+#import "LanguageManager.h"
+#import "NSString+LanguageString.h"
+//自定义配置文件
+#import "GVUserDefaults+XW.h"
+//自动布局框架
+#import "UIView+SDAutoLayout.h"
+//正则表达式验证
+#import "RegexKitLite.h"
+//网络请求
+#import "AFNetworking.h"
+//自定义网络请求重用池
+#import "MyAFHTTPSessionManager.h"
+//数据库操作相关
+#import "MyFMDataManager.h"
+//自定义工具类
+#import "XWDateUtil.h"
+//测试监控类
+#import "TestListenUtil.h"
+
+
+
+
+
+#endif /* PrefixHeader_pch */
